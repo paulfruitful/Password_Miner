@@ -132,8 +132,6 @@ os.system('cls')
 def toString(type):
  string=''
  for i in type:
-  if i in ['(',')',',']:
-      continue
   string+=f'{i}'
  return string
 print('!!!!!!!!!!!USE   TO SEPERATE THE FIRSTNAME AND LASTNAME!!!!!!!!!!!!!!!!!!')
@@ -142,12 +140,11 @@ print('!!!!!!!!!!!USE / TO SEPERATE THE Day/Month/Yead!!!!!!!!!!!!!!!!!!')
 
 year=input('Their Date of Birth:')
 parameterRange=int(input('How Many Parameters Do You Have?'))
-length=0
 interests=[]
 
 for i in range(1,parameterRange+1):
      interest=input(f'Add Interest {i}:  ')
-     length+=len(interest)
+     
      interests.append(interest)
 
 name=name.split(' ')
