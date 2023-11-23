@@ -8,16 +8,22 @@ def toString(type):
 
 passLen=int(input('Enter Password Length:'))
 digits=[0,1,2,3,4,5,6,7,8,9]
-passlist=itertools.permutations(digits,passLen)
 digits=digits*passLen
 repeatedPasswords=itertools.permutations(digits,passLen)
-print(digits)
+
+def isCode_inFile(code):
+  file=open('passlist.txt','r')
+  file=file.read()
+  if code in file:
+   return True
+  else:
+   return False
+
 
 with open('passlist.txt','a') as f:
-    for i in passlist:
-        u=toString(i)
-        f.write(f'{u} \n')
     for i in repeatedPasswords:
         u=toString(i)
         f.write(f'{u} \n')
        
+
+
