@@ -12,8 +12,18 @@ latin=''.join(set('ą č Ĥ ħ ĩ Ň Ř Ť Ŵ Ž ⒜ ⒝ ⒞ ⒟ ⒠ ⒡ ⒢ ⒣
 english='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
 ultimate=greek+physics+japanese+chinese+punctuations+kanji+currency+fractions+korean+latin+english
+def toString(type):
+ string=''
+ for i in type:
+  string+=f'{i}'
+ return string
 
-length=int(input('Enter Password Length:'))
+length=int(input('Enter  Password Length:'))
 ultimate=ultimate*length
-print(ultimate)
 passwordlist=itertools.permutations(ultimate,length)
+with open('passwordlist.txt','a', encoding='utf-8') as f:
+    for i in passwordlist:
+        u=toString(i)
+        print(type(u))
+        f.write(f'{u}\n')
+      
