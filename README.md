@@ -1,6 +1,6 @@
 
 # Password_Miner
-A Experimental Project On Permutations And Combinations For Bruteforce Algorithms
+An Experimental Project On Permutations And Combinations For Bruteforce Algorithms
 ## Authors
 
 - [@paulfruitful]('https://github.com/paulfruitful')
